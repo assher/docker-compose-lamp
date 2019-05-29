@@ -1,7 +1,7 @@
 {
     "name": "Pruebas",
     "dockerComposeFile": "../docker-compose.yml",
-    "service": "7.3.x-webserver",
+    "service": "webserver",
     "workspaceFolder": "/var/www/html",
     "shutdownAction": "stopCompose"
 }

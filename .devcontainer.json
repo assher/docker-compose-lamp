@@ -1,0 +1,14 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "webserver",
+	"workspaceFolder": "/var/www/html",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"ikappas.phpcs",
+		"bmewburn.vscode-intelephense-client",
+		"felixfbecker.php-pack",
+		"vector-of-bool.gitflow",
+		"peterjausovec.vscode-docker"
+	]
+}

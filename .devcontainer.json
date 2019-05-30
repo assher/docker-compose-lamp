@@ -7,7 +7,8 @@
 	"extensions": [
 		"ikappas.phpcs",
 		"bmewburn.vscode-intelephense-client",
-		"felixfbecker.php-pack",
+		"felixfbecker.php-debug",
+		"felixfbecker.php-intellisense",
 		"vector-of-bool.gitflow",
 		"peterjausovec.vscode-docker"
 	]

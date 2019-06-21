@@ -47,3 +47,4 @@ RUN docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+ENV SHELL /bin/bash

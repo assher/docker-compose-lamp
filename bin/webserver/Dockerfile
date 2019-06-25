@@ -26,6 +26,10 @@ RUN apt-get -y install libsqlite3-dev libsqlite3-0 mysql-client
 RUN docker-php-ext-install pdo_mysql 
 RUN docker-php-ext-install pdo_sqlite
 RUN docker-php-ext-install mysqli
+# Required for FacturaScripts
+RUN docker-php-ext-install bcmath
+# Required for Prestashop
+RUN docker-php-ext-install opcache
 
 RUN docker-php-ext-install curl
 RUN docker-php-ext-install tokenizer

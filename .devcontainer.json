@@ -11,6 +11,7 @@
 		"felixfbecker.php-debug",
 		"felixfbecker.php-intellisense",
 		"vector-of-bool.gitflow",
-		"peterjausovec.vscode-docker"
+		"peterjausovec.vscode-docker",
+		"vincaslt.highlight-matching-tag"
 	]
 }

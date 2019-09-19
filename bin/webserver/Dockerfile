@@ -48,7 +48,13 @@ RUN docker-php-ext-install mbstring
 RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ 
 RUN docker-php-ext-install -j$(nproc) gd
-
+# install wp cli
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+RUN chmod +x wp-cli.phar
+RUN php wp-cli.phar --info
+RUN mv wp-cli.phar /usr/local/bin/wp
+RUN curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/v2.3.0/utils/wp-completion.bash
+RUN /bin/bash -c "source $PWD/wp-completion.bash"
 # Enable apache modules
 RUN a2enmod rewrite headers
 ENV SHELL /bin/bash

@@ -9,9 +9,14 @@ This is a basic LAMP stack environment built using Docker Compose. It consists f
 * MySQL 5.7
 * phpMyAdmin
 
+As of now, we have 3 different branches for different PHP versions. Use appropriate branch as per your php version need:
+* [5.6.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.6.x)
+* [7.1.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.1.x)
+* [7.2.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.2.x)
+
 ## Installation
 
-Clone this repository on your local computer. Run the `docker-compose up -d`.
+Clone this repository on your local computer and checkout the appropriate branch e.g. 7.1.x. Run the `docker-compose up -d`.
 
 ```shell
 git clone https://github.com/sprintcube/docker-compose-lamp.git
@@ -24,9 +29,9 @@ docker-compose up -d
 
 Your LAMP stack is now ready!! You can access it via `http://localhost`.
 
-## Configuration
+## Configuration and Usage
 
-This package comes with default configuration options. You can modify them by creating `.env` file in your root directory.
+Please read from appropriate version branch.
 
 To make it easy, just copy the content from `sample.env` file and update the environment variable values as per your need.
 

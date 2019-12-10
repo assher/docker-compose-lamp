@@ -1,0 +1,17 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+    "name": "Test",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "webserver",
+	"workspaceFolder": "/var/www/html",
+	"shutdownAction": "stopCompose",
+	"extensions": [
+		"ikappas.phpcs",
+		"bmewburn.vscode-intelephense-client",
+		"felixfbecker.php-debug",
+		"felixfbecker.php-intellisense",
+		"vector-of-bool.gitflow",
+		"peterjausovec.vscode-docker",
+		"vincaslt.highlight-matching-tag"
+	]
+}

@@ -12,6 +12,7 @@
 		"felixfbecker.php-intellisense",
 		"vector-of-bool.gitflow",
 		"peterjausovec.vscode-docker",
-		"vincaslt.highlight-matching-tag"
+		"vincaslt.highlight-matching-tag",
+		"alefragnani.bookmarks"
 	]
 }

@@ -55,6 +55,13 @@ RUN php wp-cli.phar --info
 RUN mv wp-cli.phar /usr/local/bin/wp
 RUN curl -O https://raw.githubusercontent.com/wp-cli/wp-cli/v2.3.0/utils/wp-completion.bash
 RUN /bin/bash -c "source $PWD/wp-completion.bash"
+# Add SSH keys
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN sed -i -e 's/\r$//' /usr/local/bin/docker-entrypoint.sh
+RUN ln -s /usr/local/bin/docker-entrypoint.sh / # backwards compat
+
 # Enable apache modules
 RUN a2enmod rewrite headers
 ENV SHELL /bin/bash
+#ENTRYPOINT ["docker-entrypoint.sh"]

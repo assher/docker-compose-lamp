@@ -40,7 +40,13 @@ RUN docker-php-ext-install zip
 
 RUN apt-get -y install libicu-dev
 RUN docker-php-ext-install -j$(nproc) intl
-
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
+RUN apt-get update -y \
+  && apt-get install -y \
+     libxml2-dev \
+  && apt-get clean -y \
+  && docker-php-ext-install soap 
 RUN docker-php-ext-install mbstring
 # Temporal comment
 #RUN pecl install imagick
